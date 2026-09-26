@@ -12,6 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: List available voicechat-api versions
+        run: curl -s https://maven.maxhenkel.de/repository/public/de/maxhenkel/voicechat/voicechat-api/maven-metadata.xml
+
       - name: Unzip the project
         run: unzip -o *.zip
 
